@@ -5,6 +5,12 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const apiKey = import.meta.env.VITE_API_KEY
+
+  const handleClick = () => {
+    console.log(apiKey)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -36,6 +42,9 @@ function App() {
           >
             Vite Docs
           </a>
+          <br />
+          <br />
+          <button onClick={handleClick}>Show API_KEY in console</button>
         </p>
       </header>
     </div>
